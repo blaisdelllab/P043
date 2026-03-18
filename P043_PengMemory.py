@@ -14,6 +14,9 @@ from random import choice, shuffle
 from subprocess import run
 import pigpio # import pi, OUTPUT
 import csv
+
+# Last edited: 2026-03-18 
+
 def main():
         
         # Setup GPIO numbers (NOT PINS; gpio only compatible with GPIO num)
