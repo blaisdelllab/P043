@@ -308,6 +308,12 @@ def main():
                     rpi_board.set_servo_pulsewidth(servo_GPIO_num,
                                                    hopper_up_val) # Move hopper to up position                    
                     time.sleep(2)
+                    rpi_board.write(house_light_GPIO_num,
+                                    False) # Turn off the house light
+                    rpi_board.write(hopper_light_GPIO_num,
+                                    False) # Turn off the house light
+                    rpi_board.set_servo_pulsewidth(servo_GPIO_num,
+                                                   hopper_down_val) # Move hopper to up position 
                     if rule == 1:
                         last_correct +=1
                         summary_last_correct.append(last_correct)
@@ -334,7 +340,11 @@ def main():
                     rpi_board.set_servo_pulsewidth(servo_GPIO_num,
                                                    hopper_up_val) # Move hopper to up position
                     time.sleep(2)
-                   
+                    rpi_board.write(hopper_light_GPIO_num,
+                                    False) # Turn off the house light
+                    rpi_board.set_servo_pulsewidth(servo_GPIO_num,
+                                                   hopper_down_val) # Move hopper to up position
+                        
                     
                     if rule == 1:
                         last_correct +=1
